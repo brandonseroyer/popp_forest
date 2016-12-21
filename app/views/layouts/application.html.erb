@@ -2,13 +2,37 @@
 <html>
   <head>
     <title>PoppForest</title>
+    <%= javascript_include_tag "https://js.stripe.come/v1/",'application', 'data-turbolinks-track': true %>
+    <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to "Popp Forest", home_index_path %>
+        </div>
+        <div id="nav-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to "Home", home_path, class: "nav-text-color" %>
+            </li>
+            <li>
+              <%= link_to "About", store_index_path, class: "nav-text-color" %>
+            </li>
+            <li>
+              <%= link_to "Products", store_index_path, class: "nav-text-color" %>
+            </li>
+            <li>
+              <%= link_to "Contact", store_index_path, class: "nav-text-color" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

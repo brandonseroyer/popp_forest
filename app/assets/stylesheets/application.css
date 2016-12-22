@@ -32,6 +32,8 @@ footer {
   width: 100%;
   background-color: black;
   padding: 2%;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-container {

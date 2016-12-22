@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PoppForest</title>
+    <title>Popp Forest</title>
     <%= javascript_include_tag "https://js.stripe.come/v1/",'application', 'data-turbolinks-track': true %>
     <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
     <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
@@ -34,5 +34,6 @@
       </div>
     </nav>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

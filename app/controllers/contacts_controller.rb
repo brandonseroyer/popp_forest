@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
-    render :index
+    redirect_to contacts_path
   end
 
   private

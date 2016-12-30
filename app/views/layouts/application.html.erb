@@ -17,6 +17,18 @@
         </div>
         <div id="nav-right">
           <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href class="nav-text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Admin
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li>
+                  <%= link_to 'Customer Inquiries', contacts_path %>
+                </li>
+              </ul>
+            </li>
             <li>
               <%= link_to "Home", root_path, class: "nav-text-color" %>
             </li>
@@ -27,7 +39,7 @@
               <%= link_to "Products", products_path, class: "nav-text-color" %>
             </li>
             <li>
-              <%= link_to "Contact", contact_index_path, class: "nav-text-color" %>
+              <%= link_to "Contact", new_contact_path, class: "nav-text-color" %>
             </li>
           </ul>
         </div>

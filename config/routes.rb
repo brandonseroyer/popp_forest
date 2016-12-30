@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :about, only: [:index]
   resources :products, only: [:index]
-  resources :contact , only: [:index]
+  resources :contacts , only: [:index, :new, :create, :destroy]
 end

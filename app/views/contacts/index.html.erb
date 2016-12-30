@@ -1,0 +1,35 @@
+<div class="universal-page">
+  <div>
+    <h1>Customer Inquiries</h1>
+    <% if @contacts.any? %>
+      <% @contacts.each do |contact| %>
+        <br>
+        Date: <%= contact.created_at %>
+        <br><br>
+        Name: <%= contact.first_name %> <%= contact.last_name %>
+        <br>
+        Email: <%= contact.email %>
+        <br>
+        Phone: <%= contact.phone %>
+        <br>
+        Company: <%= contact.company %>
+        <br>
+        Address: <%= contact.address %>
+        <br>
+        City: <%= contact.city %>
+        <br>
+        Zip: <%= contact.zip %>
+        <br>
+        Country: <%= contact.country %>
+        <br>
+        Message: <%= contact.message %>
+        <p><%= link_to "Delete", contact_path(contact),
+        :data => {:confirm => "You sure?",
+          :method => "delete"} %></p>
+        <hr>
+      <% end %>
+    <% else %>
+      No Customer Inquiries have been submitted yet
+    <% end %>
+  </div>
+</div>
